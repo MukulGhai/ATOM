@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Saanchi 💔</title>
+    <meta name="description" content="A heartfelt apology for Saanchi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating particles canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Section 1: Opening - Dramatic entrance -->
+    <section id="section-intro" class="section active">
+        <div class="intro-content">
+            <div class="broken-heart-container">
+                <div class="heart-piece left">💔</div>
+                <div class="heart-piece right">💔</div>
+            </div>
+            <h1 class="glitch-text" data-text="I'm Sorry">I'm Sorry</h1>
+            <p class="subtitle typewriter">Saanchi, please hear me out...</p>
+            <button id="btn-start" class="cta-btn pulse-btn">
+                <span>Open My Heart</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: The Apology Letter -->
+    <section id="section-letter" class="section">
+        <div class="letter-container">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="letter-paper" id="letter-paper">
+                        <div class="letter-content">
+                            <p class="letter-greeting">Dear Saanchi,</p>
+                            <p class="letter-line" data-delay="0">I know I messed up, and words might not be enough to fix what I've broken.</p>
+                            <p class="letter-line" data-delay="1">But I need you to know — every moment without your smile feels like an eternity of grey skies.</p>
+                            <p class="letter-line" data-delay="2">I was wrong. Completely, absolutely, undeniably wrong.</p>
+                            <p class="letter-line" data-delay="3">You deserve better — better words, better actions, better everything. And I promise to be that.</p>
+                            <p class="letter-line" data-delay="4">You are the most beautiful chapter of my life, and I can't bear the thought of it ending because of my mistakes.</p>
+                            <p class="letter-line" data-delay="5">I'm not asking you to forget. I'm asking you to give me a chance to make it right.</p>
+                            <p class="letter-signature">With all my heart,<br><span class="signature-name">Yours, always ❤️</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Memory Lane / Reasons -->
+    <section id="section-reasons" class="section">
+        <h2 class="section-title reasons-title">Why I Can't Lose You</h2>
+        <div class="reasons-grid">
+            <div class="reason-card" data-tilt>
+                <div class="reason-icon">🌙</div>
+                <p>Your late-night talks that make every worry disappear</p>
+            </div>
+            <div class="reason-card" data-tilt>
+                <div class="reason-icon">😊</div>
+                <p>The way your smile lights up even my darkest days</p>
+            </div>
+            <div class="reason-card" data-tilt>
+                <div class="reason-icon">💪</div>
+                <p>How you believe in me even when I don't believe in myself</p>
+            </div>
+            <div class="reason-card" data-tilt>
+                <div class="reason-icon">🎵</div>
+                <p>The songs that remind me of every moment with you</p>
+            </div>
+            <div class="reason-card" data-tilt>
+                <div class="reason-icon">🤗</div>
+                <p>Your hugs that feel like coming home</p>
+            </div>
+            <div class="reason-card" data-tilt>
+                <div class="reason-icon">✨</div>
+                <p>Everything about you that makes my world complete</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Promise Timeline -->
+    <section id="section-promises" class="section">
+        <h2 class="section-title">My Promises to You</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>I Promise to Listen</h3>
+                    <p>Really listen — not just hear, but understand every word you say.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>I Promise to Be Patient</h3>
+                    <p>To give you the space and time you need, always.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>I Promise to Be Better</h3>
+                    <p>Not perfect — but genuinely, consistently better, every single day.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>I Promise to Never Give Up</h3>
+                    <p>On us. On you. On what we have. No matter what.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Question -->
+    <section id="section-forgive" class="section">
+        <div class="forgive-container">
+            <div class="floating-hearts" id="floating-hearts"></div>
+            <h2 class="forgive-question">Can you forgive me, Saanchi?</h2>
+            <div class="forgive-buttons">
+                <button id="btn-yes" class="forgive-btn yes-btn">
+                    <span>Yes, I forgive you 💕</span>
+                </button>
+                <button id="btn-no" class="forgive-btn no-btn">
+                    <span>Not yet...</span>
+                </button>
+            </div>
+            <div id="response-yes" class="response hidden">
+                <div class="celebration-container">
+                    <h2 class="celebration-text">Thank you, Saanchi! 🥺❤️</h2>
+                    <p class="celebration-sub">You just made me the happiest person alive.<br>I promise I won't let you down again.</p>
+                    <div class="infinity-heart">♾️❤️</div>
+                </div>
+            </div>
+            <div id="response-no" class="response hidden">
+                <div class="understanding-container">
+                    <h2 class="understanding-text">I understand... 🥺</h2>
+                    <p class="understanding-sub">I'll wait for you, Saanchi. However long it takes.<br>Because you're worth every second of waiting.</p>
+                    <p class="understanding-sub">I'll keep trying to be better. For you. For us.</p>
+                    <div class="waiting-heart">💔→❤️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music toggle -->
+    <button id="music-toggle" class="music-btn" title="Toggle ambient music">
+        <span class="music-icon">🎵</span>
+        <span class="music-status">Play</span>
+    </button>
+
+    <!-- Audio -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2024/11/28/audio_3fba0a3a8a.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
