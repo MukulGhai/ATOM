@@ -1,0 +1,325 @@
+MVP (MINIMUM VIABLE PRODUCT)
+
+THIS SECTION DEFINES THE REQUIRED HACKATHON SCOPE.
+
+If anything is unclear, prioritize this MVP.
+
+MVP FEATURES
+Authentication
+JWT login/logout
+Role-based routing
+Protected APIs
+Goal Management
+Create/Edit/Delete goals
+Weightage validation
+Goal approval workflow
+Quarterly Tracking
+Quarterly progress updates
+Achievement submission
+Status tracking
+Dashboard
+
+Employee dashboard:
+
+Goal progress
+Quarter completion
+Notifications
+
+Manager dashboard:
+
+Pending approvals
+Team performance
+Escalations
+
+Admin dashboard:
+
+System overview
+User statistics
+Escalation Module
+
+Automatically generate escalation when:
+
+Quarterly update missed
+Goal overdue
+Approval pending too long
+
+Escalations should appear visually in dashboard.
+
+Shared Goal Sync
+
+Implement shared goals properly using relational mapping.
+
+Notifications
+
+Realtime notifications using Socket.IO:
+
+Goal approved
+Goal rejected
+Escalation triggered
+Quarter submission reminders
+Analytics
+
+Include charts/cards:
+
+Goal completion %
+Pending approvals
+Team performance trends
+Quarterly submission stats
+NON-MVP FEATURES (OPTIONAL)
+
+Only implement if time permits:
+
+AI recommendations
+Email integration
+PDF exports
+Advanced analytics
+Peer reviews
+Calendar sync
+Audit logs
+Multi-org tenancy
+DATABASE DESIGN REQUIREMENTS
+
+Design schema EARLY before coding APIs.
+
+Suggested entities:
+
+users
+roles
+goals
+goal_assignments
+quarterly_checkins
+achievements
+shared_goal_links
+escalations
+notifications
+comments
+approvals
+
+Use proper:
+
+Foreign keys
+Indexes
+Constraints
+Cascading rules
+
+Avoid redundant data.
+
+API REQUIREMENTS
+
+Build REST APIs with proper structure.
+
+Example modules:
+
+/auth
+/users
+/goals
+/quarters
+/analytics
+/notifications
+/escalations
+
+Requirements:
+
+JWT auth middleware
+Validation
+Error handling
+Pagination where needed
+Consistent JSON responses
+FRONTEND REQUIREMENTS
+
+UI should look modern and hackathon-demo ready.
+
+Use:
+
+Tailwind cards
+Responsive layouts
+Sidebar navigation
+Charts
+Status badges
+Progress bars
+Toast notifications
+
+Pages required:
+
+Login
+Employee Dashboard
+Manager Dashboard
+Admin Dashboard
+Goal Management
+Quarterly Check-ins
+Analytics
+Notifications
+Escalations
+REALTIME REQUIREMENTS
+
+Using Flask-SocketIO:
+
+Push realtime notifications
+Update dashboards live
+Show approval updates instantly
+Show escalation alerts instantly
+ANALYTICS REQUIREMENTS
+
+Analytics is a major differentiator.
+
+Include:
+
+Goal completion percentage
+Average quarterly completion
+Team productivity metrics
+Escalation counts
+Approval turnaround time
+
+Use:
+
+Recharts or Chart.js
+ESCALATION MODULE REQUIREMENTS
+
+This module should visually stand out during demo.
+
+Escalation conditions:
+
+No quarterly submission by deadline
+Manager approval delay
+Goal stagnation
+Repeated rejection
+
+Escalation cards should include:
+
+Severity
+User
+Goal
+Delay duration
+Suggested action
+PROJECT STRUCTURE
+
+Use clean modular architecture.
+
+Example:
+
+backend/
+
+app.py
+config/
+models/
+routes/
+services/
+middleware/
+sockets/
+utils/
+
+frontend/
+
+src/
+pages/
+components/
+layouts/
+services/
+hooks/
+context/
+charts/
+CODING STANDARDS
+Write clean maintainable code
+Use reusable React components
+Use environment variables
+Avoid hardcoding
+Add comments where logic is complex
+Follow modular architecture
+Keep naming consistent
+DEVELOPMENT PRIORITY ORDER
+
+IMPORTANT:
+
+Build in THIS order:
+
+Phase 1
+DB schema
+Authentication
+Role system
+Basic frontend setup
+Phase 2
+Goal management APIs/UI
+Approval workflow
+Weightage validation
+Phase 3
+Quarterly tracking
+Shared goal sync
+Phase 4
+Escalation engine
+Notifications
+Socket.IO
+Phase 5
+Analytics dashboard
+UI polishing
+Deployment
+
+DO NOT postpone schema design until later.
+
+DEPLOYMENT REQUIREMENTS
+
+Deploy EARLY.
+
+Need:
+
+Live frontend URL
+Live backend API
+Production DB
+Working demo login
+
+Environment variables must be configurable.
+
+TESTING REQUIREMENTS
+
+Test:
+
+RBAC restrictions
+Weightage validation
+Shared goal synchronization
+Quarterly deadlines
+Escalation triggers
+JWT auth
+Realtime notifications
+DEMO PRIORITY
+
+The hackathon demo should highlight:
+
+Enterprise workflow
+Shared goal synchronization
+Escalation engine
+Realtime updates
+Analytics dashboards
+
+These are the project’s strongest differentiators.
+
+IMPORTANT IMPLEMENTATION NOTES
+Build database schema FIRST
+Keep backend modular
+Do NOT duplicate shared goal data
+Keep MVP stable before adding extra features
+Prioritize working demo over perfect architecture
+Ensure deployment works before final day
+Use seed/demo data for presentation
+FINAL DELIVERABLES
+
+The completed project should include:
+
+Fullstack web application
+Production deployment
+Clean GitHub repository
+README with setup steps
+Sample demo accounts
+Seeded database
+API documentation
+Responsive UI
+Working realtime notifications
+SUCCESS CRITERIA
+
+The project is successful if:
+
+Complete employee goal lifecycle works
+Shared goals sync correctly
+Escalations work automatically
+Analytics dashboards are impressive
+Demo flow is smooth
+Deployment is stable
+Business rules are enforced correctly

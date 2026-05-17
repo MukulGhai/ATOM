@@ -1,0 +1,20 @@
+# Escalations Page Overview
+
+The Escalations page (`/escalations`) is a core component of the AtomQuest Goal Setting & Tracking Portal designed to automate and enforce business logic.
+
+## What is this page about?
+This page acts as an automated monitoring dashboard for Managers and Admins, while also providing Employees visibility into any warnings on their account. It tracks and displays "escalations" — automated alerts generated when certain performance management rules are violated or deadlines are missed.
+
+## Key Features & Triggers
+The page categorizes escalations by severity (Low, Medium, High, Critical) and tracks four primary types of alerts:
+1. Missed Check-ins: Triggered when an employee fails to submit a mandatory quarterly check-in on time.
+2. Approval Delays: Triggered when a manager takes too long to approve or reject a submitted goal.
+3. Goal Stagnation: Triggered when a goal shows no progress over an extended period.
+4. Repeated Rejections: Triggered if an employee's goal is rejected multiple times, indicating they might need manager intervention.
+
+## Workflows on this Page
+- Employees: Can view their own escalations and click "Acknowledge" to confirm they have seen the alert and are working on resolving it.
+- Managers / Admins: See a high-level statistical overview (Open, Acknowledged, Resolved) for their team. They have the authority to click "Resolve" once the underlying issue has been fixed. They can also manually trigger the escalation engine to run a fresh check across the database.
+
+## Design Aesthetic
+It utilizes the new synthwave "cyber" aesthetic with glassmorphism cards. Each escalation is color-coded with vibrant neon borders (Emerald for Low, Amber for Medium, Orange for High, and Red/Pink for Critical) to immediately draw attention to the most pressing issues.

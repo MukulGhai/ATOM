@@ -1,0 +1,79 @@
+# AtomQuest: Roles and Features Guide
+
+The AtomQuest platform uses strict Role-Based Access Control (RBAC). There are three distinct login methods/roles: **Employee**, **Manager**, and **Admin**. Below is a detailed breakdown of what each role can access and exactly what actions they can perform.
+
+---
+
+## 1. Employee
+**Demo Login**: `employee1@atomquest.com`
+**Password**: `emp123`
+
+The Employee role focuses on personal performance management, goal submission, and quarterly tracking.
+
+### Accessible Pages & Capabilities:
+* **Dashboard (`/dashboard`)**:
+  - View personal statistics (total goals, pending approvals, average progress).
+  - View a quick summary of active goals and recent alerts.
+* **Goals (`/goals`)**:
+  - Create new personal goals (Drafts).
+  - Define weightage (min 10%), target dates, and metrics.
+  - Submit goal sets to their Manager for approval (Total weightage must exactly equal 100%).
+  - Share goals with peers via a relational link.
+* **Check-ins (`/checkins`)**:
+  - Log quarterly check-ins for active goals.
+  - Update numerical progress and leave descriptive status notes (e.g., "On Track", "At Risk").
+* **Escalations (`/escalations`)**:
+  - View system-generated warnings triggered by their actions (e.g., missed deadlines, stagnant goals).
+  - Click **"Acknowledge"** on open escalations to notify management they are actively working on resolving the issue.
+* **Analytics (`/analytics`)**:
+  - View personal performance charts and visual breakdowns of goal completion.
+* **Notifications (`/notifications`)**:
+  - Receive real-time Socket.IO alerts for manager approvals, rejections, or new escalations.
+
+---
+
+## 2. Manager
+**Demo Login**: `manager@atomquest.com`
+**Password**: `manager123`
+
+The Manager role includes everything an Employee can do (for their own personal goals), plus advanced permissions to review and guide their direct reports.
+
+### Accessible Pages & Capabilities:
+* **Dashboard (`/dashboard`)**:
+  - View aggregated team statistics.
+  - See a table of "Team Performance" detailing direct reports' progress.
+* **Approvals (`/approvals`)** *(Manager/Admin Exclusive)*:
+  - Review goal sets submitted by employees.
+  - **Approve** goals, changing their status to "Active".
+  - **Reject** goals and leave mandatory feedback on why it was rejected.
+  - **Inline Edit**: Adjust weightages or metrics directly without needing the employee to resubmit.
+* **Check-ins (`/checkins`)**:
+  - View a dedicated "Team Check-ins" table to monitor reports' quarterly progress.
+* **Escalations (`/escalations`)**:
+  - View escalations generated across their entire team.
+  - Click **"Resolve"** to close an escalation once the employee has fixed the issue.
+  - Click **"Run Check"** to manually trigger the backend escalation engine to scan the team for new violations.
+* **All Employee Pages**: Full access to create personal goals, view analytics, etc.
+
+---
+
+## 3. Admin
+**Demo Login**: `admin@atomquest.com`
+**Password**: `admin123`
+
+The Admin has supreme access over the entire system, managing organizational structure, user access, and viewing global analytics.
+
+### Accessible Pages & Capabilities:
+* **Users (`/users`)** *(Admin Exclusive)*:
+  - Complete User Management dashboard.
+  - **Create Users**: Add new employees to the platform.
+  - **Assign Roles & Managers**: Set organizational hierarchy (e.g., assigning an employee to a specific manager).
+  - **Deactivate**: Disable user accounts to revoke platform access.
+  - **Edit**: Update emails, departments, and reset passwords.
+* **Dashboard & Analytics**:
+  - View organization-wide statistics (not just team-level).
+  - See global performance distributions and company-wide goal completion metrics.
+* **Escalations (`/escalations`)**:
+  - See every escalation in the entire company.
+  - Resolve any escalation system-wide.
+* **Full Access**: Admins inherit all Employee and Manager capabilities and pages.
